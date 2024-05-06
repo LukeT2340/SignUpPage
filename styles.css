@@ -1,0 +1,179 @@
+/* Resetting default margin, padding, and font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Comfortaa", sans-serif;
+    height: 100vh; /* Full height */
+    background: black; /* Black background color */
+}
+
+/* Container for centering content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Left section styles */
+.left {
+    text-align: center;
+    background: url('background.jpg') center/cover no-repeat; /* Background image */
+    width: 45vh; /* Fixed width */
+    height: 100vh; /* Full height */
+    display: flex; /* Flex layout */
+    align-items: center; /* Vertically center items */
+    flex-direction: column; /* Column layout */
+}
+
+/* Logo container styles */
+.logo-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 50vh; /* Half of the left section's width */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    margin-top: 20vh; /* Spacing from the top */
+    font-family: "Rowdies", sans-serif;
+}
+
+/* Logo text styles */
+.logo-container h1 {
+    color: white; /* White text color */
+    font-size: 45px; /* Font size */
+}
+
+/* Logo image styles */
+#logo-img {
+    width: 70px; /* Fixed width */
+    height: auto; /* Maintain aspect ratio */
+    padding-block: 20px; /* Padding */
+}
+
+/* Footer styles */
+.footer {
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Positioned at the bottom */
+    text-align: center; /* Center-aligned text */
+    color: rgba(255, 255, 255, 0.85); /* Text color with alpha */
+    padding: 2px 0; /* Padding */
+    font-size: 10px; /* Font size */
+    font-weight: lighter; /* Lighter font weight */
+}
+
+/* Footer link styles */
+.footer h5 a {
+    color: rgba(255, 255, 255, 0.85); /* Link color */
+}
+
+/* Right section styles */
+.right {
+    width: 75vh; /* Fixed width */
+    height: 100vh; /* Full height */
+    background: rgb(245, 245, 245); /* Light gray background */
+}
+
+/* Blurb text styles */
+.blurb-text {
+    width: 80%; /* 80% width */
+    padding: 100px 0px 50px 30px; /* Padding */
+    font-weight: 500; /* Font weight */
+    font-size: 17px; /* Font size */
+}
+
+/* Container for input fields */
+.inputs-container {
+    background: white; /* White background */
+    padding-block: 10px; /* Padding */
+    padding-inline: 20px; /* Padding */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Box shadow */
+}
+
+/* Individual input container styles */
+.input-container {
+    flex: 1; /* Flexible width */
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Column layout */
+    max-width: 200px; /* Maximum width */
+    padding-right: 60px; /* Padding */
+}
+
+/* Input label styles */
+.input-container label {
+    font-weight: 600; /* Font weight */
+    color: rgb(75, 75, 75); /* Text color */
+    font-size: 12px; /* Font size */
+}
+
+/* Row styles */
+.row {
+    display: flex; /* Flex layout */
+    padding: 5px 5px 10px 0; /* Padding */
+}
+
+/* Input field styles */
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+    height: 23px; /* Fixed height */
+    border: 1px solid rgb(222, 221, 221); /* Border */
+    border-radius: 3px; /* Border radius */
+    outline: none; /* No outline */
+}
+
+/* Input field focus styles */
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+    border-color: blue; /* Blue border on focus */
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3); /* Box shadow on focus */
+}
+
+/* Submit button styles */
+input[type="submit"] {
+    background: #596D48; /* Button background color */
+    color: white; /* Text color */
+    border-radius: 5px; /* Border radius */
+    padding-inline: 30px; /* Horizontal padding */
+    padding-block: 10px; /* Vertical padding */
+    border: none; /* No border */
+    margin-left: 30px; /* Margin */
+    margin-top: 30px; /* Margin */
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3); /* Box shadow */
+}
+
+/* Submit button hover styles */
+input[type="submit"]:hover {
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Already have an account link styles */
+.right h5 {
+    margin-left: 30px; /* Margin */
+    margin-top: 30px; /* Margin */
+}
+
+/* Already have an account link hover styles */
+.right h5 a {
+    color: #596D48; /* Link color */
+    text-decoration: none; /* No underline */
+}
+
+/* Password input placeholder styles */
+input[type="password"]:placeholder-shown {
+    border-color: initial; /* Initial border color */
+}
+
+/* Password input focus styles */
+input[type="password"]:focus:not(:placeholder-shown) {
+    border-color: red; /* Red border on focus if password is being entered */
+}
+
+/* Password input valid styles */
+input[type="password"]:valid {
+    border-color: blue; /* Blue border if password is valid */
+}
+
+/* Password match message styles */
+.row h5 {
+    color: white; /* Text color */
+    font-size: 9px; /* Font size */
+    padding: 0; /* Padding */
+    margin: 0; /* Margin */
+    font-weight: 100; /* Font weight */
+}

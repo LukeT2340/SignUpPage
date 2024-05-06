@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="logo-container">
+                <img id="logo-img" src="logo.png">
+                <h1>NAME</h1>
+            </div>
+            <footer class="footer">
+                <h5>Photo by <a href="#">Hale West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a></h5>
+            </footer>
+        </div>
+        <div class="right">
+            <div class="blurb-text">
+                <p>This is not a real online Service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+                <p>You know you want to.</p>
+            </div>
+            <form action="#" method="get">
+                <div class="inputs-container">
+                    <h3>Let's do this!</h3>
+                    <div class="row">
+                        <div class="input-container">
+                            <label for="first-name">FIRST NAME</label>
+                            <input type="text" id="first-name" minlength="3" maxlength="20" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="last-name">LAST NAME</label>
+                            <input type="text" id="last-name" minlength="3" maxlength="20" required>
+                        </div>
+                    </div>                        
+                    <div class="row">
+                        <div class="input-container">
+                            <label id="email">EMAIL</label>
+                            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                        </div>
+                        <div class="input-container">
+                            <label id="phone">PHONE NUMBER</label>
+                            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-container">
+                            <label for="password1">PASSWORD</label>
+                            <input type="password" id="password1" required>
+                            <h5 id="password-match">Passwords do not match</h5>
+                        </div>
+                        <div class="input-container">
+                            <label for="password2">CONFIRM PASSWORD</label>
+                            <input type="password" id="password2" required>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" id="submit-form" value="Create Account">
+            </form>
+            <h5>Already have an account? <a href="#">Log in</a></h5>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const password1Input = document.getElementById('password1');
+        const password2Input = document.getElementById('password2');
+        const passwordMatchText = document.getElementById('password-match');
+
+        function checkPasswordMatch() {
+            if (password1Input.value === password2Input.value) {
+                passwordMatchText.textContent = 'Passwords match';
+                passwordMatchText.style.color = 'green';
+            } else if (password1Input.value == "" || password2Input.value == "") {
+                passwordMatchText.style.color = 'white';
+            } else {
+                passwordMatchText.textContent = 'Passwords do not match';
+                passwordMatchText.style.color = 'red';
+            }
+        }
+
+        password1Input.addEventListener('input', checkPasswordMatch);
+        password2Input.addEventListener('input', checkPasswordMatch);
+    </script>
+</body>
+</html>
